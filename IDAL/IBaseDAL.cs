@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace IDAL
 {
-    class IBaseDAL
+    public interface IBaseDAL<T> where T :class
     {
+        T GetModelById(int id);
+        IList<T> GetList();
+
     }
 }
